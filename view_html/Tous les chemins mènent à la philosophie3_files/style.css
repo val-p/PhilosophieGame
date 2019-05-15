@@ -1,0 +1,101 @@
+@charset "UTF-8";
+
+h1
+{
+    color: 	#696969;
+    text-align : center;
+    font-family: "Avantgarde", sans-serif;
+    font-weight: 200;
+}
+
+h2
+{
+  text-align : center;
+  color: #708090;  
+  font-weight: 500;  
+    
+}
+
+.new{
+  margin-top: 5%;
+  text-align : center;
+  color: #2F4F4F;  
+  font-weight: 300; 
+}
+
+body 
+{
+      font-family: "Raleway", sans-serif;   
+}
+
+.header {
+     overflow: hidden;
+     background-color: #f1f1f1;
+     padding: 20px 20px;
+}
+
+.win {
+    text-align : center;
+    margin-top: 5%;
+    color: #20B2AA;
+    font-size: 20px;
+}
+
+.lose {
+    margin-top: 5%;
+    text-align : center;
+    color: #DC143C;
+    font-size: 20px;
+}
+
+
+input[type="text"]
+{
+    margin-top: 4%;
+    margin-left: 40%;
+    /*margin: 20 20px 20 20px;*/
+    width: 200px; /* longueur input */
+    padding: 10px; /* largeur input */
+    border: 2px solid #ccc;
+    border-radius: 4px;  /* degre bordure */
+    resize: vertical;
+}
+
+input[type="submit"]
+{
+}
+
+.index_submit
+{
+    font-family: "Avantgarde", sans-serif;
+    padding:8px 18px; 
+    background:#ccc; 
+    border:0 none;
+    cursor:pointer;
+    -webkit-border-radius: 5px;
+    border-radius: 5px; 
+}
+
+.game_submit
+{
+    font-family: "Avantgarde", sans-serif;
+    padding:8px 18px; 
+    background:#ccc; 
+    border:0 none;
+    cursor:pointer;
+    -webkit-border-radius: 5px;
+    border-radius: 5px; 
+    margin-left : 40%;
+    margin-bottom : 5%;
+}
+
+
+input[type="radio"]
+{
+    margin-left: 40%;
+    margin-bottom: 15px;
+    width:40px;
+}
+
+
+

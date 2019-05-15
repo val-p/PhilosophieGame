@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="static/style.css"/>
+    <title>Tous les chemins mènent à la philosophie</title>
+  </head>
+    
+    
+  <body>
+
+    <div class="header">
+    <a href="http://localhost:5000" class="logo" style="text-decoration: none">
+        <h1>Philosophie Game</h1>
+    </a>
+    </div>
+ 
+    {% with messages = get_flashed_messages(with_categories=true) %}
+      {% for category, message in messages %}
+            <div class="{{ category }}">{{ message }}</div>
+      {% endfor %}
+    {% endwith %}
+      
+      
+    {% block body %}
+      {# Début du bloc "body", dont vous devez modifier le contenu #}
+      <h2 class="new"> New Game : Enter a page </h2>
+    <form action="http://localhost:5000/new-game" method="POST">
+      <input type="text" name="start" placeholder="Page..">
+      <input type="submit" class="index_submit">
+    </form>
+      {# Fin du bloc "body" #}
+    {% endblock %}
+      
+  </body>
+</html>

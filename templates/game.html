@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="static/style.css"/>
+    <title>Tous les chemins mènent à la philosophie</title>      
+  </head>
+  <body>
+      
+  {%extends "index.html"%}
+  {% block body %}
+   <header>
+      <h2> Page : {{ session.article }}</h2>
+      <h2> Score : {{ session.score }}</h2>
+   </header>
+      
+      <form action="http://localhost:5000/move" method="POST">
+         {% for i in range(0,link|length) %}
+              {% if i == 0 %}
+              <div>
+                  <input type="radio" id={{link[i]}} name="destination" value={{link[i]}} checked>
+                  <label for={{link[i]}}>{{link[i]}}</label>
+              </div>
+              {% else %}
+              <div>
+                  <input type="radio" id={{link[i]}} name="destination" value={{link[i]}}>
+                  <label for={{link[i]}}>{{link[i]}}</label>
+              </div>
+             {% endif %}
+         {% endfor %}
+       <input type="hidden" name="scoree" value={{session.score}}>
+       <input type="submit" class ="game_submit">
+       </form>   
+  {% endblock %}
+  </body>
+</html>
